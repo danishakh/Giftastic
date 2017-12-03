@@ -132,12 +132,14 @@ $("#btn-add").on('click', function() {
     return;
   }
   else {
+    // Push user input to celebs array
     celebs.push(input);
 
-    $("#buttons-view").empty();
-    $("#inputCeleb").val() = "";
-    
+    // Clear textbox
+    $("#inputCeleb").val("");
+
     renderButtons();
+
   }
   
 });
