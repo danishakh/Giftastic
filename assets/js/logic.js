@@ -142,5 +142,9 @@ $("#btn-add").on('click', function() {
   
 });
 
+$("#btn-clear").on("click", function() {
+  $("#gifs-view").empty();
+});
+
 // Calling the renderButtons function to display the initial list of buttons
 renderButtons();
