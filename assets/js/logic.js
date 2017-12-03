@@ -126,7 +126,7 @@ $(document).on('click', '.gif-img', switchImg);
 $("#btn-add").on('click', function() {
   
   var input = $("#inputCeleb").val().trim();
-
+  
   if (input === "") {
     alert("Please enter something before clicking Add");
     return;
@@ -135,6 +135,8 @@ $("#btn-add").on('click', function() {
     celebs.push(input);
 
     $("#buttons-view").empty();
+    $("#inputCeleb").val() = "";
+    
     renderButtons();
   }
   
