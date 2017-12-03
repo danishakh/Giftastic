@@ -127,10 +127,17 @@ $("#btn-add").on('click', function() {
   
   var input = $("#inputCeleb").val().trim();
 
-  celebs.push(input);
+  if (input === "") {
+    alert("Please enter something before clicking Add");
+    return;
+  }
+  else {
+    celebs.push(input);
 
-  $("#buttons-view").empty();
-  renderButtons();
+    $("#buttons-view").empty();
+    renderButtons();
+  }
+  
 });
 
 // Calling the renderButtons function to display the initial list of buttons
