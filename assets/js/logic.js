@@ -24,12 +24,12 @@ function renderButtons() {
 
   for (var i = 0; i < celebs.length; i++) {
 
-    var celebBtn = $("<button>");
+    var celebBtn = $("<button type='button'>");
 
     celebBtn.attr({
       id: 'btn_'+i,
       'data-name': celebs[i],
-      class: 'celeb celeb-btn btn btn-primary'
+      class: 'btn btn-info celeb celeb-btn '
     });
     celebBtn.text(celebs[i]);
 
@@ -46,6 +46,10 @@ function displayGIFs(){
 
   // Get the 'data-name' attribute from the button clicked
   var celeb = $(this).attr('data-name');
+
+  // Show active state
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
 
   // save the celeb in our global variable
   clickedCeleb = celeb;
